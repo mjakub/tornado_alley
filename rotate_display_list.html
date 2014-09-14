@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Rotate display lists</title>
+  <meta charset="utf-8">
+   <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"-->
+   <script src="js/jquery-2.1.1.min.js"> </script>
+   
+   <link rel="stylesheet" href="css/rotate_display_list.css" />
+  
+   <script src="js/gl-matrix/gl-matrix-min.js"></script>
+   <!--script src="js/requestAnimationFrame/RequestAnimationFrame.js"></script-->
+   <script src="js/rotate_display_list.js"></script>
+</head>
+
+<body>
+
+
+    <!-- the width,height  given in the canvas are just defaults in case window.innerWIdth doesn't exist -->
+    <canvas id="webglcanvas" style="border: none;" width="640" height="480"></canvas> 
+
+    <h4>
+       <div id="stats">
+                <span id="fps">60</span><span id="minfps">60</span><span id="timeof_minfps">0</span>
+                <span id="numpoints"></span>         
+        </div>
+       <div>
+           <input type="button" id="resetstats" name="resetstats" value="Reset stats"  />            
+           <!-- onclick="resetstats()" also works instead of finding by id in the script
+                didn't use it because then the function is flagged by jslint, want no jslint undefineds -->
+       </div>
+    </h4>        
+        
+        <div id="bottom_render_control">
+            <div id="spinrate_div">
+              <!--label for="spinrate_control">tornado spinrate</label> -->
+              <!-- the max of 2000 is really 2 revs/sec, since scrollbar takes integral values -->            
+              <input type="range" id="spinrate_control" min="0" max="2000" value="200" />
+              <span id="spinrate_display_value">200</span>
+            </div>
+            <div id="numpoints_div">
+              <!--label for="numpoints_control">tornado numpoint  </label> -->
+              <!-- the max of 2000 is really 2 revs/sec, since scrollbar takes integral values -->            
+              <input type="range" id="numpoints_control" min="100" max="100000" value="10000" />
+              <span id="numpoints_display_value">10000</span>
+            </div>          
+        </div>
+
+</body>
+
+</html>
+

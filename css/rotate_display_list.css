@@ -1,0 +1,28 @@
+/*
+#bottom_render_control{
+  background-color:#00abff;
+  width:100%
+}
+*/
+body{
+  margin: 0 0 0 0 ;
+  padding: 0 0 0 0;
+}
+
+#spinrate_div, #numpoints_div{
+    margin: 2px 10px;
+    border: 2px solid #555555;
+    background-color:#aaaaaa;
+}
+/* had to put the hover and background and border on the div
+   in order to work properly in both chrome and firefox
+*/
+#spinrate_div:hover{
+     background-color:#555588;
+     border: 2px solid #aaabff;
+}
+
+#numpoints_div:hover{
+     background-color:#555588;
+     border: 2px solid #aaabff;    
+}
